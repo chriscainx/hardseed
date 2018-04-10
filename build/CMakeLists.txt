@@ -20,13 +20,13 @@ SET(SRC_LIST ../src/main.cpp
 #ADD_EXECUTABLE(main ${SRC_LIST})
 #TARGET_LINK_LIBRARIES(main curl pthread)
 
-# release
-SET(CMAKE_CXX_COMPILER "g++")
-SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
-SET(CMAKE_BUILD_TYPE release)
-ADD_EXECUTABLE(hardseed ${SRC_LIST})
-TARGET_LINK_LIBRARIES(hardseed curl pthread)
-INSTALL(PROGRAMS hardseed DESTINATION /usr/local/bin)
+## release
+#SET(CMAKE_CXX_COMPILER "g++")
+#SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
+#SET(CMAKE_BUILD_TYPE release)
+#ADD_EXECUTABLE(hardseed ${SRC_LIST})
+#TARGET_LINK_LIBRARIES(hardseed curl pthread)
+#INSTALL(PROGRAMS hardseed DESTINATION /usr/local/bin)
 
 #<<<<<<<<<<<<<<<<<<<<<<
 
@@ -44,14 +44,14 @@ INSTALL(PROGRAMS hardseed DESTINATION /usr/local/bin)
 ##<<<<<<<<<<<<<<<<<<<<<<
 
 
-## osX
-##>>>>>>>>>>>>>>>>>>>>>>
+# osX
+#>>>>>>>>>>>>>>>>>>>>>>
 
-#SET(CMAKE_CXX_COMPILER "g++")
-#SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
-#SET(CMAKE_BUILD_TYPE release)
-#ADD_EXECUTABLE(hardseed ${SRC_LIST})
-#TARGET_LINK_LIBRARIES(hardseed curl pthread iconv)
-#INSTALL(PROGRAMS hardseed DESTINATION /usr/local/bin)
+SET(CMAKE_CXX_COMPILER "g++")
+SET(CMAKE_CXX_FLAGS "-std=c++11 -O3")
+SET(CMAKE_BUILD_TYPE release)
+ADD_EXECUTABLE(hardseed ${SRC_LIST})
+TARGET_LINK_LIBRARIES(hardseed curl pthread iconv)
+INSTALL(PROGRAMS hardseed DESTINATION /usr/local/bin)
 
 ##<<<<<<<<<<<<<<<<<<<<<<
